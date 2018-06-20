@@ -1,20 +1,34 @@
+body{
+    background-image: linear-gradient(to right top, #00245b, #005174, #3b787d, #859d91, #c1c2be);
+}
+:root {
+    --base: #ffc600;
+    --size: 150px;
+    --blur:.7;
+}
+
 .container{
     height: 100vh;
-    width: 600px;
+    width: 800px;
     
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 .bulb{
-    height: 400px;
+    height: 500px;
     width: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 i{
-    font-size:150px;
+    font-size:var(--size);
     transform: rotateX(180deg);
-    
+    color:var(--base);
+    text-shadow: -2px 0px var(--blur) var(--base);
+}
+.color{
+    color:var(--base);
 }
