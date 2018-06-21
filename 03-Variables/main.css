@@ -2,7 +2,7 @@ body{
     background-image: linear-gradient(to right top, #00245b, #005174, #3b787d, #859d91, #c1c2be);
 }
 :root {
-    --base: #ffc600;
+    --base: #fdc21f;
     --size: 150px;
     --blur:.7;
 }
