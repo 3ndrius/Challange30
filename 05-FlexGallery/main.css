@@ -78,6 +78,7 @@ height: 100vh;
     font-family: 'Pacifico', cursive;
     text-transform: uppercase;
     font-size:2em;
+    text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
     
 }
 .panel.open{
