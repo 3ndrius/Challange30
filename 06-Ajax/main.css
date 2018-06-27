@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 html {
     box-sizing: border-box;
-    background:#ffc600;
-    font-family:'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
+    background:#b7e9e1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
   }
   *, *:before, *:after {
     box-sizing: inherit;
