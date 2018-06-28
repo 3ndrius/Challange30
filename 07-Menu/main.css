@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+html {
+  box-sizing: border-box;
+  background: #b7e9e1;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.menu ol{
+    display: inline-block;
+
+}
+.sub-menu li{
+    display:none;
+}
