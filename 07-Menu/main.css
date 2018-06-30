@@ -12,6 +12,19 @@ html {
     display: inline-block;
 
 }
+.menu ol li{
+    list-style: none;
+
+    
+}
+.menu ol li a{
+    text-decoration: none;
+    letter-spacing: 1.2px;
+   
+}
 .sub-menu li{
     display:none;
+}
+.menu ol li a:hover{
+    display:block;
 }
