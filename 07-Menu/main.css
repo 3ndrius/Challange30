@@ -7,24 +7,29 @@ html {
   font-size: 22px;
   font-weight: 300;
 }
-
-.menu ol{
-    display: inline-block;
-
-}
-.menu ol li{
-    list-style: none;
+.menu > ol >.menu-item > a{
+    color:red;
 
     
 }
-.menu ol li a{
-    text-decoration: none;
-    letter-spacing: 1.2px;
+.menu > ol{
+    display: flex;
+    list-style-type: none;
    
 }
-.sub-menu li{
-    display:none;
+.menu > ol > li > a{
+   
+    text-decoration: none;
 }
-.menu ol li a:hover{
-    display:block;
+.menu > ol > li {
+    flex:1;
+}
+.sub-menu{
+    list-style-type: none;
+}
+.sub-menu > li > a{
+    text-decoration: none;
+}
+.sub-menu{
+    padding: 0;
 }
