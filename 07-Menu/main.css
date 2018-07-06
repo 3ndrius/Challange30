@@ -1,34 +1,39 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
 html {
   background: #b7e9e1;
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  font-weight: 300;
-  padding: 0;
-  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+
+}
+body{
+    margin: 0;
+    padding: 0;
 }
 
 .menu{
     margin: 0;
     padding: 0;
     height: 200px;
+   
 }  
 .menu > ol{
-    background:green;
+    background:rgb(24, 124, 141);
     padding: 0;
     margin: 0;
-    height: 200px;
+    height: 60px;
     display: flex;
     list-style-type: none;
-   
-    align-items: center;
+  
+    
+    padding: 30px 0 0 30px;
 
     
 
 }
 .menu > ol >.menu-item > a{
-    color:red;
+    color:rgb(255, 253, 253);
 
     
 }
@@ -39,15 +44,23 @@ html {
 }
 .menu > ol > li {
     flex:1;
+    padding-left: 20px;
 }
 .menu > ol > li:hover > .sub-menu {
     display: block;
+    background:rgb(24, 124, 141);
+    padding: 30px 0 10px 20px;
 }
 .sub-menu{
     list-style-type: none;
 }
 .sub-menu > li > a{
     text-decoration: none;
+    color:white;
+}
+.sub-menu > li > a:hover{
+color:rgb(143, 204, 255);
+
 }
 .sub-menu{
     padding: 0;
@@ -56,6 +69,5 @@ html {
 .sub-menu > li{
     position: relative;
     z-index: 100;
- 
     padding-top: 10px;
 }
