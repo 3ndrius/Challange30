@@ -7,3 +7,36 @@ html{
     font-weight: 400;
 
 }
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.header{
+  background: rgb(0, 3, 1);
+  width: 100%;
+  text-align: center;
+  color:white;
+  margin-bottom: 20px;
+}
+.main-wrap{
+    height: 800px;
+    width: 800px;
+    background: rgb(0, 19, 0);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap:10px;
+    
+
+}
+.box{
+    background: rgb(185, 28, 28);
+    width: 260px;
+    height: 260px;
+}
