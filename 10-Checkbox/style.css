@@ -1,6 +1,6 @@
 html {
     font-family: sans-serif;
-    background:#ffc600;
+    background:#7dfab5;
   }
 
   .inbox {
@@ -9,6 +9,7 @@ html {
     background:white;
     border-radius:5px;
     box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+    opacity: .9;
   }
 
   .item {
