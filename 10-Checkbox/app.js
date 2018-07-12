@@ -11,7 +11,7 @@ function handleCheck(e) {
     if(e.shiftKey && this.checked) {
         checkboxes.forEach(checkbox => {
         console.log(checkbox);
-            if(checkbox === this || checkbox=== lastChecked ) {
+            if(checkbox === this || checkbox === lastChecked ) {
                 inBetween = !inBetween;
                 console.log("Starting to in between");
             }
