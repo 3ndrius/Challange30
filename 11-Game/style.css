@@ -36,7 +36,10 @@ html{
 
 }
 .box{
-    background: rgb(185, 28, 28);
+    background: rgb(255, 255, 255);
     width: 260px;
     height: 260px;
+}
+.box-active{
+    
 }
