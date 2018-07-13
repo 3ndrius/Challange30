@@ -39,10 +39,18 @@ html{
     height: 260px; 
 }
 .box-active{
-    background-image:url('cross.svg');
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/PICOL_Cancel.svg/1024px-PICOL_Cancel.svg.png');
+    width: 260px;
+    height: 260px; 
+    background-position: center;
+    background-size:cover;
 }
 .box-active2{
-    background-image:url('circle.svg');
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Circle_blank_font_awesome.svg/512px-Circle_blank_font_awesome.svg.png');
+    width: 260px;
+    height: 260px; 
+    background-position: center;
+    background-size:cover;
 }
 .points {
     margin-top: 30px;
