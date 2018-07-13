@@ -32,67 +32,15 @@ html{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap:10px;
-    
-
 }
 .box{
     background: rgb(255, 255, 255);
     width: 260px;
-    height: 260px;
-    
-   
+    height: 260px; 
 }
-
 .box-active{
-    width: 260px;
-    height: 260px;
-    position: absolute;
-    background: red;
-   
-   
-
-}
-.box-active::before{
-    content: '';
-    position: absolute;
-    top:35px;
-    left:115px;
-    width: 30px;
-    height: 200px;
-    background: green;
-    z-index: 200;
-    transform:skewX(45deg);
-}
-.box-active::after{
-    content:'';
-    position: absolute;
-    top:35px;
-    left:115px;
-    width: 30px;
-    height: 200px;
-    background: green;
-    z-index: 200;
-    transform:skewX(-45deg);
+    background-image:url('cross.svg');
 }
 .box-active2{
-    width: 260px;
-    height: 260px;
-    position: absolute;
-    background: rgb(34, 20, 158);
-    border-radius:50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-.box-active2::before{
-    content:'';
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    background: rgb(244, 244, 245);
-    border-radius:50%;
-   
-
+    background-image:url('circle.svg');
 }
