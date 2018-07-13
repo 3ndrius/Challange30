@@ -44,3 +44,6 @@ html{
 .box-active2{
     background-image:url('circle.svg');
 }
+.points {
+    margin-top: 30px;
+}
