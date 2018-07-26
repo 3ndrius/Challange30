@@ -9,8 +9,9 @@ const progressBar = player.querySelector('.progress__filled');
 
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
-let ranges = player.querySelectorAll('.player__slider');
+const ranges = player.querySelectorAll('.player__slider');
 
+const fsButton = player.querySelector('.size-button');
 
 
 function togglePlay() {
@@ -45,6 +46,19 @@ function handleProgress() {
     progressBar.style.flexBasis = `${percent}%`;
 }
 
+function fullScreenHandle() {
+    if(player.classList.contains('player__video')) {
+        player.classList.remove('player__video');
+        fsButton.textContent = "[  ]";
+     }
+     else{
+        player.classList.add('player__video');
+        fsButton.textContent = "X";
+     }
+     
+    console.log("fullscreen");
+}
+
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
@@ -70,3 +84,5 @@ progress.addEventListener('mousedown', () => {
 progress.addEventListener('mouseup', () => {
     mousedown = false;
 });
+
+fsButton.addEventListener('click', fullScreenHandle);
