@@ -5,56 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Speech Syntesis</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        body{
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-top: 10%;
-            align-items: center;
-        }
-    #text{
-        height: 200px;
-        width: 400px;
-    }
-    .button{
-        height: 50px;
-        width: 406px;
-        margin-top:5px;
-        color:white;
-        background: rgb(38, 153, 173);
-        
-        cursor:pointer;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
+ 
 </head>
 <body>
-   <h1>Syntesis Speech API</h1>
-<!-- <form action="">
-    <input type="text">
-    <select name="select" id=""></select>
-    <input type="submit" value="send">
-</form> -->
-<textarea type="text" id="text"> </textarea>
-<button class="button">Speak</button>
-
-    <!-- <script src="app.js"></script> -->
-
-    <script>
 
 
-       
-    const button = document.querySelector('.button');
-    const text = document.querySelector('#text');
-
-button.addEventListener('click', function() {
-    wordsMy = text.value;
-    speechSynthesis.speak(new SpeechSynthesisUtterance(wordsMy));
-});
-    
-    
-    </script>
+ <script src="app.js"></script>
 </body>
 </html>
