@@ -1,6 +1,6 @@
 
 
-// get a html
+//get a html
 
 const utterance = new SpeechSynthesisUtterance();
 let voices = [];
@@ -13,7 +13,20 @@ const btnStop = document.querySelector('.btn-stop');
 utterance.text = document.querySelector('#area-text').value;
 
 
-populateVoices = () =>{
-
+function populateVoices(){
+    voices = this.getVoices();
+    const voiceOption = voices.map(voice=> `<option value="${voice.name}"> ${voice.name} (${voice.lang}</option>`)
+    .join('');
+    voiceSelect.innerHTML = voiceOption;
 }
+
+
+function setVoice() {
+    console.log(this.value);
+    utterance.voice = voices.find(voice => voice.name === this.value);   
+}
+
+
+
 speechSynthesis.addEventListener('voiceschanged', populateVoices);
+voiceSelect.addEventListener('change', setVoice);
