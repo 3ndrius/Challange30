@@ -1,53 +1,56 @@
 
 
+//get a html
+var synth = window.speechSynthesis;
 
-const button = document.querySelector('.button');
+const utterance = new SpeechSynthesisUtterance();
+let voices = [];
 
-button.addEventListener('click', function() {
-    speechSynthesis.speak(new SpeechSynthesisUtterance('hello world'));
-});
+const voiceSelect = document.querySelector('#voice-list');
+const options = document.querySelectorAll('[type="range"], #area-text');
+const btnStart = document.querySelector('.btn-start');
+const btnStop = document.querySelector('.btn-stop');
+const btnPause = document.querySelector('.btn-pause');
 
-
-// var synth = window.speechSynthesis;
-
-// var inputForm = document.querySelector('form');
-// var inputTxt = document.querySelector('input');
-// var voiceSelect = document.querySelector('select');
+utterance.text = document.querySelector('#area-text').value;
 
 
-// function populateVoiceList() {
-//   voices = synth.getVoices();
+function populateVoices(){
+    voices = this.getVoices();
+    const voiceOption = voices.map(voice=> `<option value="${voice.name}"> ${voice.name} (${voice.lang}</option>`)
+    .join('');
+    voiceSelect.innerHTML = voiceOption;
+}
 
-//   for(i = 0; i < voices.length ; i++) {
-//     var option = document.createElement('option');
-//     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-                                     
-    
-//     if(voices[i].default) {
-//       option.textContent += ' -- DEFAULT';
-//     }
 
-//     option.setAttribute('data-lang', voices[i].lang);
-//     option.setAttribute('data-name', voices[i].name);
-//     voiceSelect.appendChild(option);
-//   }
-// }
+function setVoice() {
+    console.log(this.value);
+    utterance.voice = voices.find(voice => voice.name === this.value);   
+    toggle();
+}
+function toggle() {
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+}
 
-// populateVoiceList();
-// if (speechSynthesis.onvoiceschanged !== undefined) {
-//   speechSynthesis.onvoiceschanged = populateVoiceList;
-// }
+function togglePause() {
+    if(speechSynthesis.paused) {
+        speechSynthesis.resume(utterance); 
+    }
+    else{
+        speechSynthesis.pause(); 
+    }
+}
+function setOption() {
+    console.log(this.name, this.value);
+    utterance[this.name] = this.value;
+    toggle();
+}
 
-// inputForm.onsubmit = function(event) {
-//   event.preventDefault();
 
-//   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-//   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-//   for(i = 0; i < voices.length ; i++) {
-//     if(voices[i].name === selectedOption) {
-//       utterThis.voice = voices[i];
-//     }
-//   }
-//   synth.speak(utterThis);
-//   inputTxt.blur();
-// }
+speechSynthesis.addEventListener('voiceschanged', populateVoices);
+voiceSelect.addEventListener('change', setVoice);
+options.forEach(option=> option.addEventListener('change', setOption));
+btnStart.addEventListener('click', toggle);
+btnStop.addEventListener('click', () => toggle(false));
+btnPause.addEventListener('click', togglePause);

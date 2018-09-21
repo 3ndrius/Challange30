@@ -6,12 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Speech Syntesis</title>
     <link rel="stylesheet" href="style.css">
-
- 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
+    <div class="wrap">
+        <div class="main">
+                <h1>Browser Speech</h1>
+                <br>
+                <label for="rate">Speed: <span>val</span></label>
+                <input name="rate" id="rate" type="range" min="0" max="3" value="1" step="0.1">
+                <label for="pitch">Pitch:<span>val</span></label>
+                <input name="pitch" id="pitch" type="range" min="0" max="10" value="1" step="1">
+                <label for="volume">Volume:<span>val</span></label>
+                <input type="range" name="volume" id="volume" min="0" max="1" step="0.1"  value="0.5">
+                <br>
+                <select name="list" id="voice-list">
+                        <option value="">Choose a voice</option>
+                </select>
+                <br>
+                <textarea name="text" id="area-text" cols="30" rows="18">Synthesis API</textarea>
+                <hr>
+                <div class="group">
+                    <button class="btn btn-start">Start</button>
+                    <button class="btn btn-stop">Cancel</button>
+                    <button class="btn btn-pause">Pause</button>
 
-
+                </div>
+        </div>
+    </div>
+    
  <script src="app.js"></script>
 </body>
 </html>
