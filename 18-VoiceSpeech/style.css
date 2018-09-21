@@ -3,14 +3,14 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
   
 }
 .main{
     display:flex;
     flex-direction: column;
     width:500px;
-    height:650px;
+    height:700px;
     background:#303036;
     padding:0 20px 20px 20px;
     color:#30BCED;
@@ -29,9 +29,11 @@
     padding-top: 5px;
     color:#050401;
     font-size:1.1em;
+    width:98%;
 }
 #voice-list{
     height: 50px;
+    
     
 }
 #area-text{
@@ -49,4 +51,8 @@
 }
 .btn-start{
     margin-right:9%;
+  
+}
+#spd, #pth, #vol{
+    color:#FC5130;
 }
