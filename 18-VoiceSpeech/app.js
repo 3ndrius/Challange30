@@ -29,9 +29,11 @@ function setVoice() {
     utterance.voice = voices.find(voice => voice.name === this.value);   
     toggle();
 }
-function toggle() {
+function toggle(option = true) {
     speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
+    if(option) {
+        speechSynthesis.speak(utterance);
+    }
 }
 
 function setOption() {
