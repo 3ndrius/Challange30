@@ -21,6 +21,27 @@
         console.log(name, name2);
         name = "Braian";
         console.log(name, name2);
+
+
+
+        const players = ['John', 'Tom', 'Edward', 'Mark'];
+        const team = players;
+
+        console.log(players,team);
+        console.log(players[1]);
+        team[0] = "Ronald";
+        console.log(players,team);
+
+        //copy 3way (slice, concat, spread)
+
+        const team2 = players.slice();
+        team2[0] = "Gregory";
+        console.log(players,team2);
+
+        const team3 = [].concat(players);
+        const team4 = [...players];
+        team4[0] = 'Josh';
+        console.log(players, team2, team3, team4);
     </script>
 </body>
 </html>
