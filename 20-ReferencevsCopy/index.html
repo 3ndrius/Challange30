@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reference vs Copy</title>
+</head>
+<body>
+    <h1 style="text-align: center">Reference vs copy #20 recap</h1>
+    <script>
+        let age = 20;
+        let age2 = age;
+        console.log(age,age2);
+        age = 200;
+        console.log(age, age2);
+
+        let name = 'John';
+        let name2 = 'David';
+
+        console.log(name, name2);
+        name = "Braian";
+        console.log(name, name2);
+
+
+
+        const players = ['John', 'Tom', 'Edward', 'Mark'];
+        const team = players;
+
+        console.log(players,team);
+        console.log(players[1]);
+        team[0] = "Ronald";
+        console.log(players,team);
+
+        //copy 3way (slice, concat, spread)
+
+        const team2 = players.slice();
+        team2[0] = "Gregory";
+        console.log(players,team2);
+
+        const team3 = [].concat(players);
+        const team4 = [...players];
+        team4[0] = 'Josh';
+        console.log(players, team2, team3, team4);
+
+        // objects
+        const person = {
+            name:"John Doe",
+            age:80
+        };
+
+        const pilot = person;
+        pilot.number= 99;
+        console.log(person, pilot);
+
+        const driver = Object.assign({}, person, {number: 102, age:5});
+        console.log(person, driver);
+
+        pilot2 =  {...person};
+        console.log(pilot2);
+
+        const donald = {
+            name: "Donald",
+            age: 100,
+            social: {
+                twitter: '@don',
+                fb: "#rondon"
+            }
+        }
+        console.log(donald);
+        person2 = {...donald};
+        donald.name = "Oscar";
+        donald.social.twitter = '##twit'; // only one lvl deep
+        console.log(donald, person2);
+
+        const dev = Object.assign({}, donald);
+        donald.social.twitter = '#tweter';
+        console.log(dev,donald); // only one lvl deep
+
+
+    </script>
+</body>
+</html>
