@@ -5,8 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LocalStorage & Event Delegation</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin:0;
+        }
+        .wrapper{
+            height: 100%;
+            width:300px;
+            display: flex;          
+            flex-direction: column;
+            margin:0 auto;
+        }
+        .wrapper ul {
+            list-style-type: none;
+            text-align: left;
+            margin: 20 0;
+            padding: 0;
+        }
+        h2{
+            text-align: center;
+        }
+    
+    </style>
 </head>
 <body>
+    <div class="wrapper">
+        <h2>Local Tapas</h2>
+    <ul class="plates">
+        <li>Loading Tapas...</li>
+    </ul>
+    <hr>
+    <form class="add-items">
+        <input type="text" name="item" placeholder="Item Name" required>
+        <input type="submit" value="+ Add Item" class="add-item">
+    </form>
+    </div>
     
     <script src="app.js"></script>
 </body>
